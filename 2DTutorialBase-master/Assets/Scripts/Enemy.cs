@@ -80,6 +80,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float value){
 
         FindObjectOfType<AudioManager>().Play("BatHurt");
+
         currHealth -= value;
         Debug.Log("Health is now " + currHealth.ToString());
 

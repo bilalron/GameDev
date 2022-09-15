@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
 
     #region Health_variables
     public float maxHealth;
-    float currHealth;
+    public float currHealth;
     public Slider HPSlider;
     #endregion
 
@@ -147,6 +147,16 @@ public class PlayerController : MonoBehaviour
         currHealth = Mathf.Min(currHealth, maxHealth);
         Debug.Log("Health is now " + currHealth.ToString());
         HPSlider.value = currHealth / maxHealth;
+    }
+
+    public void speedBuff(float value){
+        movespeed += value;
+        Debug.Log("Speed is now " + movespeed.ToString());
+    }
+
+    public void dmgBuff(float value){
+        Damage += value;
+        Debug.Log("Damage is now " + movespeed.ToString());
     }
 
     private void Die(){
